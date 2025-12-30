@@ -78,6 +78,7 @@ Clona el repositorio o copia el script:
 
 git clone https://github.com/<usuario>/dfir-linux-toolkit.git
 
+---
 
 # DFIR Timeline Generator (Linux)
 **timeline.sh – Forensic Timeline Creation**
