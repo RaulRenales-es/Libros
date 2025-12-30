@@ -29,7 +29,7 @@ Cada herramienta que se liste a continuación estará acompañada, cuando corres
 
 Esta sección se irá ampliando y actualizando conforme evolucione el contenido del libro y las técnicas forenses en entornos Linux.
 
-## Listado de scripts:
+
 
 # Linux Forensic Triage
 **DFIR Live Response Script – Usage Guide**
