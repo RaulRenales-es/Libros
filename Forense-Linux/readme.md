@@ -133,5 +133,74 @@ Debe interpretarse siempre junto con otras evidencias DFIR.
 
 Ubicar el script dentro del repositorio DFIR:
 
-```bash
 chmod +x timeline.sh
+
+---
+
+# acquire_disk_memory.sh
+
+Script de **adquisición forense primaria** para sistemas GNU/Linux que permite realizar:
+
+- 📀 **Copia bit a bit de un disco** (adquisición física)
+- 🧠 **Captura opcional de memoria RAM** mediante LiME
+- 🔐 **Verificación criptográfica** de las evidencias generadas
+- 📝 **Registro detallado del proceso** para trazabilidad forense
+
+Este script está diseñado como herramienta de apoyo al libro **Forense Linux** y sigue principios básicos de **informática forense defensiva**.
+
+---
+
+## 🎯 Objetivo forense
+
+El propósito de este script es **preservar evidencias digitales** minimizando la alteración del sistema y generando artefactos verificables que puedan ser utilizados en:
+
+- Análisis forense técnico
+- Investigación de incidentes
+- Laboratorios docentes
+- Ejercicios de entrenamiento forense
+
+La adquisición se realiza siguiendo un enfoque **best effort**, priorizando:
+- Integridad de la evidencia
+- Reproducibilidad
+- Documentación automática del proceso
+
+---
+
+## ⚙️ Funcionalidades principales
+
+- Adquisición completa de dispositivos de bloque (`dd` bit a bit)
+- Registro de:
+  - Modelo y número de serie del dispositivo
+  - Tamaño exacto en bytes
+  - Marca temporal UTC
+- Cálculo de **hash SHA-256** de todas las evidencias
+- Captura opcional de memoria RAM usando **LiME**
+- Separación clara entre evidencias, logs y hashes
+
+---
+
+## 📋 Requisitos
+
+### Generales
+- Ejecución como **root**
+- Sistema GNU/Linux
+- Espacio suficiente en el directorio de salida
+
+### Comandos requeridos
+- `dd`
+- `sha256sum`
+- `lsblk`
+- `blockdev`
+- `insmod` (solo si se captura memoria)
+- `lsmod` (solo si se captura memoria)
+
+### Captura de memoria
+- Módulo **LiME (`lime.ko`)** compilado para el kernel en ejecución
+
+---
+
+## 🚀 Uso
+
+sudo ./acquire_disk_memory.sh --disk /dev/sdX --out /ruta/salida
+
+
