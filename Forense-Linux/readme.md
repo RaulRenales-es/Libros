@@ -76,8 +76,7 @@ Esto es inherente al *live response* y debe documentarse correctamente.
 
 Clona el repositorio o copia el script:
 
-```bash
-git clone https://github.com/<usuario>/dfir-linux-toolkit.git'''
+git clone https://github.com/<usuario>/dfir-linux-toolkit.git
 
 
 # DFIR Timeline Generator (Linux)
